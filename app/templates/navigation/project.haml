@@ -1,6 +1,9 @@
 {{#projects}}
 .el
-  %a.project{ :href => "/projects/{{permalink}}" } {{name}}
+  %a.project{ :href => "/projects/{{permalink}}" }
+    {{name}}
+    %br
+    %small {{organization}}
 .contained
   .el
     %a.recent_activity.ajax{ :href => "/projects/{{permalink}}" }= t('shared.navigation.recent_activity')
