@@ -202,6 +202,7 @@ module UsersHelper
           :permalink => p.permalink,
           :role => p.role,
           :organization_id => p.organization_id,
+          :organization => p.organization.name,
           :owner => p.user_id,
           :archived => p.archived,
           :time_tracking => p.tracks_time,
