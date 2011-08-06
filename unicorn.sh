@@ -13,12 +13,12 @@ case "$1" in
   ;;
   '-a' | '--run')
     echo Starting Unicorn.
-    sudo -u www-data bash -c "unicorn_rails -p 3000 -E production -D >> ./log/unicorn.log"
+    sudo -u www-data bash -c "bundle exec unicorn_rails -p 3000 -E production -D >> ./log/unicorn.log"
     echo Started. Unicorn:`cat ./tmp/pids/unicorn.pid`
   ;;
   '-d' | '--rundev')
     echo Starting Unicorn in dev mode.
-    sudo -u www-data bash -c "unicorn_rails -p 3000 -E development -D >> ./log/unicorn.log"
+    sudo -u www-data bash -c "bundle exec unicorn_rails -p 3000 -E development -D >> ./log/unicorn.log"
     echo Started. Unicorn:`cat ./tmp/pids/unicorn.pid`
   ;;
   *)
