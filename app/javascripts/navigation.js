@@ -100,6 +100,7 @@ NavigationBar = {
              , time_tracking: p[1].time_tracking
              , owner: (p[1].owner == my_user.id) // Owner?
              , can_admin: (p[1].role == "3") // Admin?
+             , organization: p[1].organization
       };
     })
     $('my_projects').down('span').update(active_projects.size());
